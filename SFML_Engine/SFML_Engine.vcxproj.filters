@@ -88,21 +88,6 @@
     <ClCompile Include="SimpleSfmlEngine\logic\Collision.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SimpleSfmlEngine\dataTypes\clock.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SimpleSfmlEngine\dataTypes\matrix.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SimpleSfmlEngine\dataTypes\poolAllocator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SimpleSfmlEngine\dataTypes\random.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SimpleSfmlEngine\dataTypes\stackAllocator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SimpleSfmlEngine\core\Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -115,7 +100,22 @@
     <ClCompile Include="SimpleSfmlEngine\core\AssetManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SimpleSfmlEngine\dataTypes\Animation.cpp">
+    <ClCompile Include="SimpleSfmlEngine\dataTypes\Animation.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleSfmlEngine\dataTypes\clock.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleSfmlEngine\dataTypes\matrix.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleSfmlEngine\dataTypes\poolAllocator.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleSfmlEngine\dataTypes\random.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleSfmlEngine\dataTypes\stackAllocator.h">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

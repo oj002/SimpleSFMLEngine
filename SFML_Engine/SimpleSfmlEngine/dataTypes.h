@@ -1,13 +1,8 @@
 #pragma once
 
-namespace sse
-{
-	class clock;
-	class rng_mt19937_std;
-	class Matrix;
-
-	class PoolAllocator;
-
-	class StackAllocator;
-	class StackAllocatorMarker;
-}
+#include "dataTypes\Animation.h"
+#include "dataTypes\clock.h"
+#include "dataTypes\matrix.h"
+#include "dataTypes\poolAllocator.h"
+#include "dataTypes\random.h"
+#include "dataTypes\stackAllocator.h"
