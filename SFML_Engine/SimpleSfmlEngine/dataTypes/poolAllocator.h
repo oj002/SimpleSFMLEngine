@@ -54,7 +54,7 @@ namespace sse
 		{
 			if (m_openAllocations)
 			{
-				logger::logError<const char*>("In PoolAllocator: Not all allocations were successfully deallocated!");
+				logger::logError<const char*>("In PoolAllocator: Not all allocations were successfully deallocated!\n");
 				DEBUG_BREAK
 			}
 
@@ -78,7 +78,7 @@ namespace sse
 		{
 			if (m_head == nullptr)
 			{
-				logger::logError<const char*>("In PoolAllocator: PoolAllocator is full!");
+				logger::logError<const char*>("In PoolAllocator: PoolAllocator is full!\n");
 				DEBUG_BREAK
 				return nullptr;
 			}

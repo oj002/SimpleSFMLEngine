@@ -23,6 +23,7 @@ namespace sse
 
 		void LoadShaderFile(std::string name, std::string path);
 		sf::Shader &GetShader(std::string name);
+		
 
 	private:
 		std::map<std::string, sf::Texture> m_textures;

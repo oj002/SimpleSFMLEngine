@@ -47,7 +47,7 @@
     <ClCompile Include="SimpleSfmlEngine\core\Game.cpp" />
     <ClCompile Include="SimpleSfmlEngine\core\InputManager.cpp" />
     <ClCompile Include="SimpleSfmlEngine\core\StateMachine.cpp" />
-    <ClCompile Include="SimpleSfmlEngine\dataTypes\Animation.h" />
+    <ClCompile Include="SimpleSfmlEngine\core\AnimatedSprite.h" />
     <ClCompile Include="SimpleSfmlEngine\dataTypes\clock.h" />
     <ClCompile Include="SimpleSfmlEngine\dataTypes\matrix.h" />
     <ClCompile Include="SimpleSfmlEngine\dataTypes\poolAllocator.h" />
@@ -56,6 +56,9 @@
     <ClCompile Include="SimpleSfmlEngine\logic\Collision.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\States\SplashState.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shaders\Basic.shader" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

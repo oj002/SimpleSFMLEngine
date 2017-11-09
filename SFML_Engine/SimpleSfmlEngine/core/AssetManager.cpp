@@ -5,6 +5,7 @@
 
 namespace sse
 {
+
 	void AssetManager::LoadTexture(std::string name, std::string path)
 	{
 		sf::Texture tex;

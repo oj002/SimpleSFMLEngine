@@ -85,7 +85,7 @@ namespace sse
 		{
 			if (m_data != m_head)
 			{
-				logger::logError("In StackAllocator: Not all allocations were successfully deallocated!");
+				logger::logError("In StackAllocator: Not all allocations were successfully deallocated!\n");
 				DEBUG_BREAK
 			}
 
@@ -110,7 +110,7 @@ namespace sse
 			}
 			else
 			{
-				logger::logError("In StackAllocator: StackAllocator is full!");
+				logger::logError("In StackAllocator: StackAllocator is full!\n");
 				DEBUG_BREAK
 					return nullptr;
 			}
@@ -135,7 +135,7 @@ namespace sse
 			else
 			{
 
-				logger::logError<const char*>("In StackAllocator: StackAllocator is full!");
+				logger::logError<const char*>("In StackAllocator: StackAllocator is full!\n");
 				DEBUG_BREAK
 					return nullptr;
 			}

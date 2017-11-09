@@ -1,7 +1,7 @@
-#include <iostream>
 #include <vector>
 #include <array>
 #include <functional>
+#include <string>
 
 namespace sse
 {
@@ -23,32 +23,29 @@ namespace sse
 			m_data[y * T_X + x] = value;
 		}
 
-		void print() const {
-			for (size_t y = 0; y < T_Y; y++) {
-				for (size_t x = 0; x < T_X; x++) {
-					std::cout << at(x, y) << " ";
-				}
-				std::cout << "\n";
-			}
-		}
-
 		size_t x() const { return T_X; }
 		size_t y() const { return T_Y; }
 
-		void SetPrintFunc(std::function<void(Matrix* m)> printFunc) { m_printFunc = printFunc; }
-		void print() 
+		void print()  const
 		{
-			std::cout << "Matrix(" << T_X << ", " << T_Y << ")[";
+			std::string s;
+			s += "Matrix(";
+			s += std::to_string(T_X) + ", ";
+			s += std::to_string(T_Y) + ")[";
 			for (size_t y = 0; y < T_Y; y++)
 			{
-				std::cout << "\ny = " << y << "[";
+				s += "\ny = ";
+				s += std::to_string(y);
+				s += "[";
 				for (size_t x = 0; x < T_X - 1; x++)
 				{
-					std::cout << at(x, y) << ", ";
+					s += std::to_string(at(x, y)) + ", ";
 				}
-				std::cout << at(T_X - 1, y) << "]";
+				s += std::to_string(at(T_X - 1, y)) + "]";
 			}
-			std::cout << "]" << std::endl;
+			s += "]\n";
+			std::puts(s.c_str());
+			fflush(stdout);
 		}
 
 		void loopThrough(std::function<inline void(size_t x, size_t y, T& val)> func)
@@ -79,32 +76,29 @@ namespace sse
 			m_data[y * T_X + x] = value;
 		}
 
-		void print() const {
-			for (size_t y = 0; y < T_Y; y++) {
-				for (size_t x = 0; x < T_X; x++) {
-					std::cout << at(x, y) << " ";
-				}
-				std::cout << "\n";
-			}
-		}
-
 		size_t x() const { return T_X; }
 		size_t y() const { return T_Y; }
 
-		void SetPrintFunc(std::function<void(Matrix* m)> printFunc) { m_printFunc = printFunc; }
-		void print()
+		void print() const
 		{
-			std::cout << "Matrix(" << T_X << ", " << T_Y << ")[";
+			std::string s;
+			s += "Matrix(";
+			s += std::to_string(T_X) + ", ";
+			s += std::to_string(T_Y) + ")[";
 			for (size_t y = 0; y < T_Y; y++)
 			{
-				std::cout << "\ny = " << y << "[";
+				s += "\ny = ";
+				s += std::to_string(y);
+				s += "[";
 				for (size_t x = 0; x < T_X - 1; x++)
 				{
-					std::cout << at(x, y) << ", ";
+					s += std::to_string(at(x, y)) + ", ";
 				}
-				std::cout << at(T_X - 1, y) << "]";
+				s += std::to_string(at(T_X - 1, y)) + "]";
 			}
-			std::cout << "]" << std::endl;
+			s += "]\n";
+			std::puts(s.c_str());
+			fflush(stdout);
 		}
 
 		void loopThrough(std::function<inline void(size_t x, size_t y, T& val)> func)

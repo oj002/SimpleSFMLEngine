@@ -100,9 +100,6 @@
     <ClCompile Include="SimpleSfmlEngine\core\AssetManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SimpleSfmlEngine\dataTypes\Animation.h">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SimpleSfmlEngine\dataTypes\clock.h">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -118,5 +115,11 @@
     <ClCompile Include="SimpleSfmlEngine\dataTypes\stackAllocator.h">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SimpleSfmlEngine\core\AnimatedSprite.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shaders\Basic.shader" />
   </ItemGroup>
 </Project>

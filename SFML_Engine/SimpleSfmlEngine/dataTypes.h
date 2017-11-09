@@ -1,6 +1,5 @@
 #pragma once
 
-#include "dataTypes\Animation.h"
 #include "dataTypes\clock.h"
 #include "dataTypes\matrix.h"
 #include "dataTypes\poolAllocator.h"

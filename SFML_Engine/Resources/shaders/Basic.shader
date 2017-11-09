@@ -1,20 +1,23 @@
 #shader vertex
-#version 330 core
-
-layout(location = 0) in vec4 position;
-
 void main()
 {
-	gl_Position = position;
+	// transform the vertex position
+	gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+
+	// transform the texture coordinates
+	gl_TexCoord[0] = gl_TextureMatrix[0] * gl_MultiTexCoord0;
+
+	// forward the vertex color
+	gl_FrontColor = gl_Color;
 }
 
-
 #shader fragment
-#version 330 core
-
-layout(location = 0) out vec4 color;
+uniform sampler2D texture;
+uniform float pixel_threshold;
 
 void main()
 {
-	color = vec4(0.2, 0.3, 0.8, 1.0);
+	float factor = 1.0 / (pixel_threshold + 0.001);
+	vec2 pos = floor(gl_TexCoord[0].xy * factor + 0.5) / factor;
+	gl_FragColor = texture2D(texture, pos) * gl_Color;
 }

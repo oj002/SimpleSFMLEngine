@@ -7,6 +7,7 @@
 int main()
 {
 	sse::Game(SCREEN_WIDTH, SCREEN_HEIGHT, WINDOW_TITLE, [](sse::GameDataRef data) { data->machine.AddState(sse::StateRef(new sse::SplashState(data))); });
+
 	//std::cin.get();
 	return 0;
 }
